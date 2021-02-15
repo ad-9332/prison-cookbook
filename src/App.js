@@ -11,12 +11,12 @@ function App() {
  const [currentRecipe, setCurrentRecipe] = useState(0);
  const nextRecipe = ()=>{
   const next = currentRecipe +1
-  if(next >= recipes.length){
+  /*if(next >= recipes.length){
     setCurrentRecipe(0)
   } else {
     setCurrentRecipe(next)
-  }
-  
+  }*/
+  setCurrentRecipe (next%recipes.length)
  }
   return (
     <div className="App">
