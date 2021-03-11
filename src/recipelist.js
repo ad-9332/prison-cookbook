@@ -1,6 +1,7 @@
 export const recipes = [
     {
-        name: 'KK\'s Tamale Pie'
+        name: 'KK\'s Tamale Pie', 
+        ingredients : ['tortilla chips', 'meat', 'beans']
     },
     {
         name: 'Anita Menudo'
