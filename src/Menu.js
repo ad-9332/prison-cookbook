@@ -5,7 +5,12 @@ const Menu = (props) => {
   const { setRecipeIndex, recipes } = props;
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand
+        href="#home"
+        onClick={() => {
+          setRecipeIndex(-1);
+        }}
+      >
         From Our Bunk to Your Table: Prison Recipes by Women
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -15,6 +20,7 @@ const Menu = (props) => {
             {recipes.map(function (recipe, index) {
               return (
                 <NavDropdown.Item
+                  key={index}
                   onClick={function (e) {
                     setRecipeIndex(index);
                   }}

@@ -7,8 +7,6 @@ const Recipe = (props) => {
   const { name, ingredients, preparation, images } = props;
 
   console.log("name", name);
-  const { url } = images[0].thumbnails.large;
-  console.log(url);
 
   return (
     <Container>

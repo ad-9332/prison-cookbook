@@ -39,7 +39,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log("data", data);
-        const { url } = data.records[2].fields.Attachments[0].thumbnails.large;
+        const { url } = data.records[0].fields.Attachments[0].thumbnails.full;
         sethomepageImage(url);
       });
   }, []);
@@ -69,7 +69,16 @@ function App() {
             <button onClick={() => nextRecipe()}>Next Recipe</button>
           </>
         ) : (
-          <img src={homepageImage}></img>
+          <img className="bg" src={homepageImage}></img>
+          // <div
+          //   className="img"
+          //   style={{
+          //     width: "100%",
+          //     height: "100vh",
+          //     background: `url(${homepageImage}) no-repeat center center fixed`,
+          //     //backgroundSize: "cover",
+          //   }}
+          // ></div>
         )}
       </header>
     </div>
@@ -77,3 +86,10 @@ function App() {
 }
 
 export default App;
+
+/* .img {
+            height: 100vh;
+            width: 100%;
+            background: url(nature-test.jpeg) no-repeat center center fixed;
+            background-size: cover;
+          }/*/
