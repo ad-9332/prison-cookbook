@@ -66,7 +66,14 @@ function App() {
               preparation={currentRecipe.preparation}
               images={currentRecipe.images}
             />
-            <button onClick={() => nextRecipe()}>Next Recipe</button>
+            <button
+              onClick={() => {
+                nextRecipe();
+                window.scrollTo(0, 0);
+              }}
+            >
+              Next Recipe
+            </button>
           </>
         ) : (
           <img className="bg" src={homepageImage}></img>
